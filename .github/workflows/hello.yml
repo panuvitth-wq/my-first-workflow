@@ -1,0 +1,25 @@
+name: 👋 Hello World
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:       # เพิ่มปุ่มรันเองด้วย
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 👋 พิมพ์ Hello
+        run: echo "สวัสดี GitHub Actions!"
+
+      - name: 📅 แสดงวันที่ปัจจุบัน
+        run: date
+
+      - name: 🖥️ เช็ค OS
+        run: uname -a
+
+      - name: 🔢 คำนวณเลข
+        run: |
+          echo "2 + 2 = $((2+2))"
+          echo "10 * 5 = $((10*5))"
